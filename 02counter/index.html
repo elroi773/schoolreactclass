@@ -9,15 +9,29 @@
     <h1>Counter</h1>
     <p>Count: <span id="count">0</span></p>
     <button id="increment">+</button>
+    <button id="decrement">-</button>
+    <button id="twoincrement">++</button>
 
     <script>
         const countElement = document.getElementById('count');
         const incrementButton = document.getElementById('increment');
+        const decrementButton = document.getElementById('decrement');
+        const twoIncrementButton = document.getElementById('twoincrement');
 
         let count = 0;
 
         incrementButton.addEventListener('click', () => {
             count++;
+            countElement.textContent = count;
+        });
+
+        twoIncrementButton.addEventListener('click', () => {
+            count += 2;
+            countElement.textContent = count;
+        });
+
+        decrementButton.addEventListener('click', () => {
+            count--;
             countElement.textContent = count;
         });
     </script>

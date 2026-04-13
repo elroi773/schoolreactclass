@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import Header from './component/Header'
 
 export default function TodoListApp() {
   const [todos, setTodos] = useState([])
@@ -67,7 +68,7 @@ export default function TodoListApp() {
 
   return (
     <section style={styles.container}>
-      <h1 style={styles.title}>Todo List</h1>
+      <Header />
 
       <form onSubmit={addTodo} style={styles.form}>
         <input
